@@ -10,9 +10,9 @@ import Security
 class ViewController: UIViewController {
     
     @IBOutlet weak var keychainLabel: UILabel!
-    let keychainService = "com.cybage.service"
-    let keychainAccount = "com.cybage.account"
-    let accessGroup = "<#TeamID#>.com.cybage.SharedItems"
+    let keychainService = "com.example.service"
+    let keychainAccount = "com.example.account"
+    let accessGroup = "<#TeamID#>.com.example.SharedItems"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,16 +103,6 @@ class ViewController: UIViewController {
     
     func retrieveFromKeychain() -> String? {
         
-        
-        
-//        let query:[String:Any] = [
-//            kSecClass as String: kSecClassGenericPassword as String,
-//            kSecAttrAccount as String: keychainAccount,
-//            kSecReturnData as String: true,
-//            kSecMatchLimit as String: kSecMatchLimitOne,
-//            kSecAttrAccessGroup as String: accessGroup
-//        ]
-//
         let query = [
             kSecClass as String: kSecClassGenericPassword as String,
             kSecAttrService as String: keychainService,
